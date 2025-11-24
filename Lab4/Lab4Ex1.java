@@ -7,20 +7,18 @@ import java.util.Random;;
 public class Lab4Ex1 {
     public static void main(String[] args) throws IOException {
         Random RandomGenerator = new Random();
-        File myFile = new File("Random.csv");
+        File myFile = new File(" LuckyNumber.csv");
         FileWriter writer = new FileWriter(myFile);
 
-        for (int i = 0; i < 100; i++) {
-            writer.write(i + "," + "jonh" + "," + RandomGenerator.nextInt(0, 1000) + "\n");
+        for (int i = 0; i < 500; i++) {
+            writer.write(RandomGenerator.nextInt(0, 1000) + " ");
         }
         writer.close();
 
         Scanner read = new Scanner(myFile);
-        System.out.printf("%-10s %-20s %-10s%n", "Order", "Name", "Random");
 
-        while (read.hasNextLine()) {
-            String temp[] = read.nextLine().split(",");
-            System.out.printf("%-10s %-20s %-10s%n", temp[0], temp[1], temp[2]);
+        while (read.hasNextInt()) {
+            System.out.println(read.nextInt());
         }
         read.close();
     }

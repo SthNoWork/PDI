@@ -15,9 +15,9 @@ public class Lab4Ex5 {
             Storage.add(read.nextLine());
         }
         read.close();
-        Storage.add("Imaginary Member 1,4,M");
-        Storage.add("Imaginary Member 2,5,M");
-        Storage.add("Imaginary Member 3,6,M");
+        Storage.add("RITH CHANKOLBOTH,p2024...,m");
+        Storage.add("PICH CHANVATANAK,p2024...,m");
+        Storage.add("CHIV INTHERA,p2024...,f");
 
         FileWriter writer = new FileWriter(myFile);
         Collections.sort(Storage);
