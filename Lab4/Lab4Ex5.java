@@ -1,6 +1,7 @@
 import java.io.File;
 import java.io.FileWriter;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Scanner;
 import java.io.IOException;
 
@@ -19,6 +20,7 @@ public class Lab4Ex5 {
         Storage.add("Imaginary Member 3,6,M");
 
         FileWriter writer = new FileWriter(myFile);
+        Collections.sort(Storage);
 
         for (int i = 0 ; i < Storage.size() ; i++) {
             writer.write(Storage.get(i) + "\n");

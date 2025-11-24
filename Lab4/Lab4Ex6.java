@@ -29,8 +29,8 @@ public class Lab4Ex6 {
         print("Total Candidates with an average score above 90: ", allCandidates.total, allCandidates.male,
                 allCandidates.female);
 
-        allCandidates.getStats(Storage, (float) 85, 5,8);
-         print("Total Candidates with each subject score at least 85: ", allCandidates.total, allCandidates.male,
+        allCandidates.getStats(Storage, (float) 85, 5, 8);
+        print("Total Candidates with each subject score at least 85: ", allCandidates.total, allCandidates.male,
                 allCandidates.female);
 
         String[] group = { "A", "B", "C", "D", "E" };
@@ -43,7 +43,7 @@ public class Lab4Ex6 {
 
     /////////////////////////////////////////////////////////////////////
     public static void print(String title, int x, float y, float z) {
-        System.err.println();
+        System.out.println();
         System.out.println(title + x);
         System.out.println("% of Male: " + y * 100 / x);
         System.out.println("% of Female: " + z * 100 / x);
@@ -77,7 +77,7 @@ public class Lab4Ex6 {
             female = 0;
 
             for (int i = 0; i < Storage.size(); i++) {
-                float value = Float.parseFloat(Storage.get(i)[column]); // convert String to float
+                float value = Float.parseFloat(Storage.get(i)[column]);
 
                 if (value >= Condition) {
                     total++;
@@ -100,7 +100,7 @@ public class Lab4Ex6 {
             for (int i = 0; i < Storage.size(); i++) {
                 boolean atleast = true;
                 for (int j = column1; j <= column2; j++) {
-                    float value = Float.parseFloat(Storage.get(i)[j]); // convert String to float
+                    float value = Float.parseFloat(Storage.get(i)[j]);
                     if (value >= Condition) {
                         atleast = false;
                         break;
