@@ -20,33 +20,4 @@ public class Lab4Ex4 {
             System.out.printf("%-20s %-20s %-5s%n", temp[0], temp[1], temp[2]);
         }
     }
-
-    public static int getValidatedInteger(Scanner read, String prompt) {
-        String temp;
-        while (true) {
-            System.out.print(prompt);
-
-            temp = read.nextLine();
-
-            if (temp.isBlank()) {
-                System.out.println("Error: read cannot be blank or contain only spaces. Please try again.");
-                continue;
-            }
-
-            try {
-                int value = Integer.parseInt(temp);
-
-                if (value <= 0) {
-                    System.out.println("Error: Value must be greater than 0.");
-                    continue;
-                }
-
-                return value;
-
-            } catch (NumberFormatException e) {
-                System.out.println("Error: Integer only! read contains invalid characters.");
-            }
-        }
-    }
-
 }
