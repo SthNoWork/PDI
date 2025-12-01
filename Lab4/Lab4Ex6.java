@@ -29,7 +29,7 @@ public class Lab4Ex6 {
         print("Total Candidates with an average score above 90: ", allCandidates.total, allCandidates.male,
                 allCandidates.female);
 
-        allCandidates.getStats(Storage, (float) 85, 5, 8);
+        allCandidates.getStats(Storage, (float) 85, 5, 7);
         print("Total Candidates with each subject score at least 85: ", allCandidates.total, allCandidates.male,
                 allCandidates.female);
 
@@ -101,7 +101,7 @@ public class Lab4Ex6 {
                 boolean atleast = true;
                 for (int j = column1; j <= column2; j++) {
                     float value = Float.parseFloat(Storage.get(i)[j]);
-                    if (value >= Condition) {
+                    if (value < Condition) { 
                         atleast = false;
                         break;
                     }
@@ -117,5 +117,6 @@ public class Lab4Ex6 {
                 }
             }
         }
+
     }
 }
