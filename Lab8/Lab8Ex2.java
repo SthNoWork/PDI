@@ -1,28 +1,3 @@
-// Problem 2- Open–Closed Principle (OCP)
-// Given (Bad Design)
-// class DiscountService {
-//  double calculateDiscount(String discountType, double amount) {
-//  if (discountType.equals("STUDENT")) {
-//  return amount * 0.10;
-//  }
-//  else if (discountType.equals("FESTIVAL")) {
-//  return amount * 0.20;
-//  }
-//  else if (discountType.equals("LOYAL")) {
-//  return amount * 0.15;
-//  }
-//  return 0;
-//  }
-// }
-// To-do Task:
-// 1. Create an interface for discount calculation.
-// 2. Create separate classes for each discount type.
-// 3. Ensure:
-// o No if-else in main service
-// o New discount types can be added without modifying existing code
-// 4. Each discount class must have:
-// o At least 3 variables
-// o At least 3 methods
 interface calculateDiscount {
     double CalculateDiscount();
 }

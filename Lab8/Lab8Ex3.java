@@ -1,35 +1,3 @@
-// Problem 3-Liskov Substitution Principle(LSP)Given(Problematic Design)
-// class Account {
-//     double balance;
-
-//     void deposit(double amount) {
-//     }
-
-//     void withdraw(double amount) {
-//     }
-// }
-
-// class FixedDepositAccount extends Account {
-//     void withdraw(double amount) {
-//         throw new UnsupportedOperationException();
-//     }}
-//To-do Task:
-
-//     1.Explain why
-//     LSP is violated.2.
-//     Redesign the
-
-//     2.class hierarchy so:
-//     o No subclass throws
-//     unexpected exceptions 3. Each
-
-//     3.class should have:
-//     o Variables:accountNumber,balance,
-//     accountType
-// o Methods:
-
-//     deposit(), getBalance(), appropriate withdrawal behavior
-
 abstract class Account {
     protected String accountNumber;
     protected double balance;
